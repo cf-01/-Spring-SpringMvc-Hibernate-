@@ -14,7 +14,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.sql.Array;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 @Controller
@@ -24,6 +26,26 @@ public class PersonController {
 
     @Autowired
     private PersonService personService;
+
+
+    @PostMapping("/toLogin")
+    @ResponseBody
+    public Map<String, Object> login(Person person) {
+        Person person1 = personService.getPersonOne(person);
+        Map<String, Object> map = new HashMap<>();
+        // 判断person的角色
+        String role = person1.getRole();
+        if (person1 != null) {
+            map.put("msg", "登录成功");
+            map.put("code", "200");
+            map.put("role", role);
+            map.put("personId", person1.getId());
+        } else {
+            map.put("msg", "登录失败");
+            map.put("code", "500");
+        }
+        return map;
+    }
 
 
     /**

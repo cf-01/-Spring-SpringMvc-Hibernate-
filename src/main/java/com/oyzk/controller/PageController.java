@@ -11,4 +11,19 @@ public class PageController {
     public String toIndex(){
         return "homePage";
     }
+
+    @RequestMapping("toItemList")
+    public String toItemList(){
+        return "itemList";
+    }
+
+    @RequestMapping("addItem")
+    public String addItem(){
+        return "addItem";
+    }
+
+    @RequestMapping("toUserItem")
+    public String toUserItem(){
+        return "userItem";
+    }
 }

@@ -9,7 +9,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>信息展示页面</title>
+    <title>仓库管理系统</title>
     <link type="text/css" rel="stylesheet" href="../../css/bootstrap.css">
     <script type="text/javascript" src="../../js/jquery.min.js"></script>
     <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
@@ -20,7 +20,7 @@
             <div class="col-md-12 column">
                 <div class="page-headr">
                     <h1>
-                        <small>信息列表 ———————— 显示所有人员信息</small>
+                        <small>信息列表 ———————— 显示所有库存信息</small>
                     </h1>
                     <span style="color:#FAF520 ;font-weight: bold">${flageMsg}</span>
                 </div>
